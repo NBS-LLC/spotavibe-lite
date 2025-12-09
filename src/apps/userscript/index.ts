@@ -16,6 +16,12 @@ const storage = await LocalStorageAdapter.create();
 const cacheProvider = new Cache(storage);
 const cacheStats = new CacheStats(storage);
 
+window.spotavibelite = {
+  clearCache: async () => {
+    await cacheProvider.clear();
+  },
+};
+
 await cacheProvider.prune();
 await cacheProvider.enforceQuota();
 
