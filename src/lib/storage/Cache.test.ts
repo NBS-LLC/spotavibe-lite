@@ -254,6 +254,18 @@ describe(Cache.name, () => {
 
       expect(await storage.keys()).toEqual([]);
     });
+
+    it("does not remove items that are not valid CacheItem objects", async () => {
+      const malformedId = "malformed-id";
+      const malformedItem = { some: "data" }; // Not a CacheItem
+
+      await storage.setItem(malformedId, malformedItem);
+
+      await cache.clear();
+
+      expect(await storage.keys()).toEqual([malformedId]);
+      expect(await storage.getItem(malformedId)).toEqual(malformedItem);
+    });
   });
 
   describe("isolation", () => {
