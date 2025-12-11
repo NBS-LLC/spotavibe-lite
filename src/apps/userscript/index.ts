@@ -20,6 +20,25 @@ window.spotavibelite = {
   clearCache: async () => {
     await cacheProvider.clear();
   },
+
+  cachedItemCount: async () => {
+    return await cacheStats.getNamespaceItemCount();
+  },
+
+  cachedItemSizeInBytes: async () => {
+    return await cacheStats.getNamespaceUsageInBytes();
+  },
+
+  help: () => {
+    console.log(`
+      ${log.namespace} Console Commands
+
+      - clearCache(): Empties the cache (removes all items).
+      - cachedItemCount(): The count of all cached items.
+      - cachedItemSizeInBytes(): The total size of cached items, in bytes.
+      - help(): Displays this message.
+    `);
+  },
 };
 
 await cacheProvider.prune();
