@@ -240,6 +240,34 @@ describe(Cache.name, () => {
     });
   });
 
+  describe(Cache.prototype.clear.name, () => {
+    it("removes all cached items", async () => {
+      jest.spyOn(console, "debug").mockImplementation();
+
+      await t.givenValidItem("valid-id-1", "valid-data-1");
+      await t.givenExpiredItem("expired-id-1", "expired-data-1");
+      await t.givenValidItem("valid-id-2", "valid-data-2");
+      await t.givenExpiredItem("expired-id-2", "expired-data-2");
+      await t.givenValidItem("valid-id-3", "valid-data-3");
+
+      await cache.clear();
+
+      expect(await storage.keys()).toEqual([]);
+    });
+
+    it("does not remove items that are not valid CacheItem objects", async () => {
+      const malformedId = "malformed-id";
+      const malformedItem = { some: "data" }; // Not a CacheItem
+
+      await storage.setItem(malformedId, malformedItem);
+
+      await cache.clear();
+
+      expect(await storage.keys()).toEqual([malformedId]);
+      expect(await storage.getItem(malformedId)).toEqual(malformedItem);
+    });
+  });
+
   describe("isolation", () => {
     it("finds and stores by namespace", async () => {
       const id = "some-id";

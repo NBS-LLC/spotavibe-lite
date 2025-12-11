@@ -120,6 +120,14 @@ export class Cache implements CacheProvider {
     await Promise.allSettled(promises);
   }
 
+  async clear(): Promise<void> {
+    const cachedItems = await this.getCachedItems();
+    for (const cachedItem of cachedItems) {
+      await this.storage.removeItem(cachedItem.key);
+      console.debug(log.namespace, `Cleared: ${cachedItem.key} from cache.`);
+    }
+  }
+
   private getExpirationDateUtc(offsetInMs: number): string {
     return new Date(Date.now() + offsetInMs).toISOString();
   }
