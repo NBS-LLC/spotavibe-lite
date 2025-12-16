@@ -29,6 +29,13 @@ window.spotavibelite = {
     return await cacheStats.getNamespaceUsageInBytes();
   },
 
+  donate: () => {
+    console.log(
+      log.namespace,
+      `Show your support for ${config.appName} by donating: https://www.paypal.com/ncp/payment/EZHV3YMSZFQ4G.`,
+    );
+  },
+
   help: () => {
     console.log(`
       ${log.namespace} Console Commands
@@ -36,10 +43,13 @@ window.spotavibelite = {
       - clearCache(): Empties the cache (removes all items).
       - cachedItemCount(): The count of all cached items.
       - cachedItemSizeInBytes(): The total size of cached items, in bytes.
+      - donate(): Displays a donation link to help support this project.
       - help(): Displays this message.
     `);
   },
 };
+
+window.spotavibelite.donate();
 
 await cacheProvider.prune();
 await cacheProvider.enforceQuota();
