@@ -2,6 +2,12 @@
 
 A [Userscript](https://share.google/aimode/9SnOg0rhvgdQ2t5O2) that overlays basic DJ information (bpm, key, [camelot notation](https://share.google/aimode/WjqrbjUpvlXZJAJKl), etc) on the Spotify web player.
 
+## Donations
+
+Want to support this project? Use the following link:
+
+https://www.paypal.com/ncp/payment/EZHV3YMSZFQ4G
+
 ## Usage
 
 ### Prerequisites
@@ -28,12 +34,6 @@ If a song's audio features can be located they will be displayed next to the son
 Audio features, debug information and console commands can be found via the browser's dev tools:
 
 <img src="docs/usage-guide-example-002.png" width="800px">
-
-### Donations
-
-Want to support this project? Use the following link:
-
-https://www.paypal.com/ncp/payment/EZHV3YMSZFQ4G
 
 ## Development
 
