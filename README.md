@@ -2,11 +2,33 @@
 
 A [Userscript](https://share.google/aimode/9SnOg0rhvgdQ2t5O2) that overlays basic DJ information (bpm, key, camelot notation, etc) on the Spotify web player.
 
-## Prerequisites
+## Usage
 
+### Prerequisites
+
+- [Spotify](https://open.spotify.com/) account, free or premium
+- [Tampermonkey](https://www.tampermonkey.net/) (or similar userscript manager)
+
+### Installation
+
+Click the link (or copy/paste) and follow your userscript manager's instructions:
+
+https://github.com/NBS-LLC/spotavibe-lite/releases/latest/download/spotavibe-lite.user.js
+
+### Donations
+
+Want to support this project? Use the following link:
+
+https://www.paypal.com/ncp/payment/EZHV3YMSZFQ4G
+
+## Development
+
+### Prerequisites
+
+- Installation prerequisites
 - [ASDF](https://asdf-vm.com)
 
-## Build
+### Build
 
 ```bash
 > asdf install
@@ -14,7 +36,7 @@ A [Userscript](https://share.google/aimode/9SnOg0rhvgdQ2t5O2) that overlays basi
 > npm run package:userscript
 ```
 
-## Usage
+### Run
 
 After building, install it locally:
 
