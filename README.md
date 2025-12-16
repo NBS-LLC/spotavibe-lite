@@ -23,6 +23,12 @@ If a song's audio features can be located they will be displayed next to the son
 
 <img src="docs/usage-guide-example-001.png" width="800px">
 
+### Advanced
+
+Audio features, debug information and console commands can be found via the browser's dev tools:
+
+<img src="docs/usage-guide-example-002.png" width="800px">
+
 ### Donations
 
 Want to support this project? Use the following link:
