@@ -15,6 +15,14 @@ Click the link (or copy/paste) and follow your userscript manager's instructions
 
 https://github.com/NBS-LLC/spotavibe-lite/releases/latest/download/spotavibe-lite.user.js
 
+### Guide
+
+Once the usesrscript is installed and activated, refresh Spotify's web player.
+
+If a song's audio features can be located they will be displayed next to the song's title:
+
+<img src="docs/usage-guide-example-001.png" width="800px">
+
 ### Donations
 
 Want to support this project? Use the following link:
@@ -38,7 +46,7 @@ https://www.paypal.com/ncp/payment/EZHV3YMSZFQ4G
 
 ### Run
 
-After building, install it locally:
+After building, run it locally:
 
 ```bash
 > npm run serve:userscript
