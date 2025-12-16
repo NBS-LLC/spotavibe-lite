@@ -1,6 +1,6 @@
 # SpotAVibe Lite
 
-A [Userscript](https://share.google/aimode/9SnOg0rhvgdQ2t5O2) that overlays basic DJ information (bpm, key, camelot notation, etc) on the Spotify web player.
+A [Userscript](https://share.google/aimode/9SnOg0rhvgdQ2t5O2) that overlays basic DJ information (bpm, key, [camelot notation](https://share.google/aimode/WjqrbjUpvlXZJAJKl), etc) on the Spotify web player.
 
 ## Usage
 
