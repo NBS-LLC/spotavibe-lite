@@ -39,7 +39,7 @@ Audio features, debug information and console commands can be found via the brow
 
 ### Prerequisites
 
-- Installation prerequisites
+- [Usage prerequisites](#prerequisites)
 - [ASDF](https://asdf-vm.com)
 
 ### Build
